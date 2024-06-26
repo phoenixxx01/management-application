@@ -32,6 +32,7 @@ public class EmployeeController {
         return "register";
     }
 
+
     @PostMapping("/createUser")
     public String createUser(@ModelAttribute EmployeeDetails user, HttpSession session){
         boolean f = userService.checkEmail(user.getEmail());
